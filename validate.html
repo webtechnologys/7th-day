@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>javascript</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<center>
+		<h1 style="color: red"> registerform</h1>
+	<table border="2px">
+	<form name="regform" onsubmit="return fun()">
+	<tr><td>name</td><td><input type="text" name="name"></td></tr>
+
+	<tr><td>password</td><td><input type="password" name="password"></td></tr>
+
+	<tr><td>email</td><td>	<input type="text" name="email"></td></tr>
+
+	<tr><td>Phone number</td><td><input type="text" name="phonenumber"></td></tr>
+
+	<tr><td>Address</td><td><input type="text" name="address"></td></tr>
+
+	<tr><td colspan="2"><center><input type="submit" name="submit"></center></td></tr>
+
+	</form>
+</table>
+</center>
+	<script type="text/javascript">
+		function fun(){
+		var name=document.forms['regform']['name'];
+		var password=document.forms['regform']['password'];
+		var email=document.forms['regform']['email'];
+		var phone=document.forms['regform']['phonenumber'];
+		var address=document.forms['regform']['address'];
+         
+         if(name.value=="")
+         {
+         	alert("enter the name");
+         	name.focus();
+         	return false;
+		}
+
+         if(password.value=="")
+         {
+         	alert("enter the password");
+         	password.focus();
+         return false;
+		}
+
+         if(email.value=="")
+         {
+         	alert("enter the email id");
+         	email.focus();
+         return false;
+		}
+		if(email.value.indexOf('@',0)<0)
+         {
+         	alert("enter the @ ");
+         	email.focus();
+         return false;
+		}
+		if(email.value.indexOf('.',0)<0)
+         {
+         	alert("enter the . ");
+         	email.focus();
+         return false;
+		}
+
+		  if(phone.value=="")
+         {
+         	alert("enter the phone number");
+         	phone.focus();
+         return false;
+		}
+		if(address.value=="")
+         {
+         	alert("enter the address");
+         	address.focus();
+         return false;
+		}
+		return true;
+	}
+	</script>
+
+	<button onclick="document.getElementsByClassName('t').innerHTML=Date()"> click for time </button>
+	<p class="t"> </p> 
+	
+		
+
+
+</body>
+</html>

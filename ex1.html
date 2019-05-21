@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="well"> this is well </div>
+<div class="alert alert-danger">
+	please fill this box
+	</div>
+	<div class="alert alert-info">
+	please fill this box
+	</div>
+	<div class="alert alert-warning">
+	please fill this box
+	</div>
+	<div class="alert alert-primary">
+	please fill this box
+	</div>
+	<a href="#" data-toggle="tooltip" title="welcome"> hover me</a><br>
+
+	<div class="container">
+	<a href="#" data-toggle="popover" title="welcome" data-content="hi"> hover me</a>
+</div>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('[data-toggle="popover"]').popover();
+
+		});
+	</script>
+</body>
+</html>
